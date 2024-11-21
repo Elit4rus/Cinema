@@ -1,0 +1,53 @@
+﻿<Page x:Class="Cinema.View.Pages.CinemaPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Cinema.View.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="742" d:DesignWidth="1594"
+      Title="CinemaPage">
+
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="3.5*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            <TextBlock Text="Предварительный просмотр отчета" Grid.Column="1" FontSize="22" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Image Source="/Resources/f47f7d52823030e8035f286880448c1e.png" Grid.Row="3" Grid.RowSpan="2" Grid.ColumnSpan="3"/>
+        </Grid>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="Укажите почту, на которую необходимо отправить отчет" FontSize="22" HorizontalAlignment="Center"/>
+                <TextBox x:Name="EmailTb" Grid.Row="2" Width="400" Height="40" VerticalContentAlignment="Center" Padding="5 0 0 0"/>
+                <Button x:Name="SendBtn" Content="Отправить" FontSize="22" Grid.Row="6" Width="200" Height="40" Click="SendBtn_Click"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>
